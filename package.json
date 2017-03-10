@@ -1,7 +1,7 @@
 {
   "name": "vue-admin",
   "version": "0.1.12",
-  "description": "Vue Admin Panel Framework",
+  "description": "Admin Panel",
   "repository": "vue-bulma/vue-admin",
   "homepage": "https://admin.vuebulma.com",
   "license": "MIT",

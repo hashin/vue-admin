@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="tile is-ancestor">
-      <div class="tile is-parent">
+      <!-- <div class="tile is-parent">
         <article class="tile is-child box">
           <p class="title">One</p>
           <p class="subtitle">Subtitle</p>
@@ -24,7 +24,7 @@
           <p class="title">Four</p>
           <p class="subtitle">Subtitle</p>
         </article>
-      </div>
+      </div> -->
     </div>
 
     <div class="tile is-ancestor">
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div class="tile is-ancestor">
+    <!-- <div class="tile is-ancestor">
       <div class="tile is-vertical is-9">
         <div class="tile">
           <div class="tile is-parent">
@@ -101,7 +101,7 @@
           </div>
         </article>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -137,17 +137,17 @@ export default {
         }]
       }
     }
-  },
-
-  mounted () {
-    setInterval(() => {
-      // https://github.com/vuejs/vue/issues/2873
-      // Array.prototype.$set/$remove deprecated (use Vue.set or Array.prototype.splice instead)
-      this.data.forEach((item, i) => {
-        this.data.splice(i, 1, Math.ceil(Math.random() * 1000))
-      })
-    }, 1024)
   }
+
+  // mounted () {
+  //   setInterval(() => {
+  //     // https://github.com/vuejs/vue/issues/2873
+  //     // Array.prototype.$set/$remove deprecated (use Vue.set or Array.prototype.splice instead)
+  //     this.data.forEach((item, i) => {
+  //       this.data.splice(i, 1, Math.ceil(Math.random() * 1000))
+  //     })
+  //   }, 1024)
+  // }
 }
 </script>
 
