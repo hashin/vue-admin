@@ -4,6 +4,7 @@ import charts from './charts'
 import uifeatures from './uifeatures'
 import components from './components'
 import tables from './tables'
+import devices from './devices'
 
 // show: meta.label -> name
 // name: component name
@@ -20,15 +21,26 @@ const state = {
       },
       component: lazyLoading('dashboard', true)
     },
-    {
-      name: 'Axios',
-      path: '/axiosDemo',
-      meta: {
-        icon: 'fa-rocket',
-        link: 'axios/index.vue'
-      },
-      component: lazyLoading('axios', true)
-    },
+    // {
+    //   name: 'Axios',
+    //   path: '/axiosDemo',
+    //   meta: {
+    //     icon: 'fa-rocket',
+    //     link: 'axios/index.vue'
+    //   },
+    //   component: lazyLoading('axios', true)
+    // },
+    // {
+    //   name: 'Devices',
+    //   path: '/devices',
+    //   meta: {
+    //     icon: 'fa-thermometer-three-quarters',
+    //     link: 'devices/index.vue'
+    //   },
+    //   component: lazyLoading('devices', true)
+
+    // }
+    devices,
     charts,
     uifeatures,
     components,
