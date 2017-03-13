@@ -28,22 +28,49 @@
     </div>
 
     <div class="tile is-ancestor">
-      <div class="tile is-parent is-6">
+      <div class="tile is-parent is-12">
         <article class="tile is-child box">
-          <h4 class="title">Five</h4>
-          <div class="content">
-            <chart :type="'doughnut'" :data="chartData"></chart>
+          <h4 class="title">Temperature Monitoring</h4>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">Select Super Market</label>
+            </div>
+            <div class="control">
+                <div class="select is-fullwidth">
+                  <select v-model="selected.superMarket">
+                    <option v-for="smarket in superMarket" :value="smarket">{{smarket}}</option>
+                  </select>
+                </div>
+            </div>
+          </div>
+          <div class="control is-horizontal" v-if="this.selected.superMarket === 'Market 1'">
+              <div class="control-label">
+                <!-- <chart :type="'doughnut'" :data="chartData"></chart> -->
+                <div class="select is-fullwidth">
+                  <!-- <center><button class="button is-white">Devices at {{ this.selected.superMarket }}</button></center> -->
+                  <center><router-link to="devices/devices1"> {{ this.selected.superMarket }} </router-link></center>
+                </div>
+              </div>
+          </div>
+          <div class="control is-horizontal" v-if="this.selected.superMarket === 'Market 2'">
+              <div class="control-label">
+                <!-- <chart :type="'doughnut'" :data="chartData"></chart> -->
+                <div class="select is-fullwidth">
+                  <!-- <center><button class="button is-white">Devices at {{ this.selected.superMarket }}</button></center> -->
+                  <center><router-link to="devices/devices2"> {{ this.selected.superMarket }} </router-link></center>
+                </div>
+              </div>
           </div>
         </article>
       </div>
-      <div class="tile is-parent is-6">
+      <!-- <div class="tile is-parent is-6">
         <article class="tile is-child box">
           <h4 class="title">Six</h4>
           <div class="content">
             <chart :type="'pie'" :data="chartData"></chart>
           </div>
         </article>
-      </div>
+      </div> -->
     </div>
 
     <!-- <div class="tile is-ancestor">
@@ -115,7 +142,11 @@ export default {
 
   data () {
     return {
-      data: [300, 50, 100]
+      data: [300, 50, 100],
+      superMarket: ['Market 1', 'Market 2'],
+      selected: {
+        superMarket: 'Market 1'
+      }
     }
   },
 
