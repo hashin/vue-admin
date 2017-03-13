@@ -12,7 +12,7 @@
               <thead>
                 <tr>
                   <th></th>
-                  <th>Super Market Yolo</th>
+                  <th>Super Market</th>
                   <th>Year started</th>
                   <th colspan="3">Links</th>
                 </tr>
@@ -31,7 +31,7 @@
                     <i class="fa fa-android"></i>
                   </td>
                   <td>
-                    <a class="button is-small" @click="openModalCard()">Market 1</a>
+                    <a class="button is-small" @click="openModalCard()">Freezer 1</a>
                   </td>
                   <td>
                     2017
@@ -57,7 +57,7 @@
                     <i class="fa fa-firefox"></i>
                   </td>
                   <td>
-                    <a href="#">Market 2</a>
+                    <a class="button is-small" @click="openModalCard()">Freezer 2</a>
                   </td>
                   <td>
                     2017
@@ -83,7 +83,7 @@
                     <i class="fa fa-linux"></i>
                   </td>
                   <td>
-                    <a href="#">Market 3</a>
+                    <a class="button is-small" @click="openModalCard()">Freezer 3</a>
                   </td>
                   <td>
                     2017
@@ -109,7 +109,7 @@
                     <i class="fa fa-wordpress"></i>
                   </td>
                   <td>
-                    <a href="#">Market 4</a>
+                    <a class="button is-small" @click="openModalCard()">Freezer 4</a>
                   </td>
                   <td>
                     2017
@@ -175,42 +175,13 @@ export default {
   methods: {
     openModalCard () {
       const cardModal = this.cardModal || (this.cardModal = openCardModal({
-        title: 'Market 1',
+        title: 'Freezer 1',
         url: this.$store.state.pkg.homepage
       }))
       cardModal.$children[0].active()
     }
   }
 }
-  // computed: {
-  //   chartData () {
-  //     return {
-  //       labels: [
-  //         'Red',
-  //         'Blue',
-  //         'Yellow'
-  //       ],
-  //       datasets: [{
-  //         data: this.data,
-  //         backgroundColor: [
-  //           '#FF6384',
-  //           '#36A2EB',
-  //           '#FFCE56'
-  //         ]
-  //       }]
-  //     }
-  //   }
-  // }
-
-  // mounted () {
-  //   setInterval(() => {
-  //     // https://github.com/vuejs/vue/issues/2873
-  //     // Array.prototype.$set/$remove deprecated (use Vue.set or Array.prototype.splice instead)
-  //     this.data.forEach((item, i) => {
-  //       this.data.splice(i, 1, Math.ceil(Math.random() * 1000))
-  //     })
-  //   }, 1024)
-  // }
 </script>
 
 <style lang="scss" scoped>
